@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shahid Gul - Frontend Developer specializing in React, JavaScript, and modern web technologies. Building scalable, production-ready applications from Srinagar, JK.">
+    <meta name="keywords"
+        content="Frontend Developer, React Developer, JavaScript Developer, Web Developer, React.js, TanStack Query, Material UI, Srinagar">
+    <meta name="author" content="Shahid Gul">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Shahid Gul | Frontend Developer">
+    <meta property="og:description"
+        content="Frontend Developer specializing in React, JavaScript, and modern web technologies. Building scalable applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shahidgul.dev">
+    <meta property="og:image" content="https://shahidgul.dev/images/profile.png">
+    <meta property="og:site_name" content="Shahid Gul Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Imshahidsid">
+    <meta name="twitter:creator" content="@Imshahidsid">
+    <meta name="twitter:title" content="Shahid Gul | Frontend Developer">
+    <meta name="twitter:description"
+        content="Frontend Developer specializing in React, JavaScript, and modern web technologies.">
+    <meta name="twitter:image" content="https://shahidgul.dev/images/profile.png">
+
+    <!-- Favicon -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <title>Shahid Gul | Frontend Developer</title>
+    <link rel="canonical" href="https://shahidgul.dev/">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://shahidgul.dev/#person",
+        "name": "Shahid Gul",
+        "jobTitle": "Frontend Developer",
+        "url": "https://shahidgul.dev",
+        "image": "https://shahidgul.dev/images/profile.png",
+        "sameAs": [
+          "https://github.com/Shahidgul19",
+          "https://linkedin.com/in/shahid-gul-42a1691aa",
+          "https://x.com/Imshahidsid",
+          "https://facebook.com/ishahid.1998"
+        ],
+        "knowsAbout": ["React", "JavaScript", "Web Development", "UI/UX Design", "SEO"],
+        "worksFor": {
+          "@id": "https://shahidgul.dev/#service"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://shahidgul.dev/#service",
+        "name": "Shahid Gul Web Development",
+        "image": "https://shahidgul.dev/images/profile.png",
+        "url": "https://shahidgul.dev",
+        "telephone": "+917006811096",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Srinagar",
+          "addressRegion": "JK",
+          "addressCountry": "IN"
+        },
+        "serviceType": ["React Development", "UI/UX Design", "SEO Optimization"]
+      }
+    ]
+    </script>
+</head>
+
+<body>
+    <!-- ===== LOADER ===== -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR (Desktop Only) ===== -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header class="header" id="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <a href="#hero" class="nav-logo" aria-label="Shahid Gul - Home">
+                <span class="logo-text">SG</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#hero" class="nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem">About</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="nav-item dropdown" role="none">
+                    <div class="nav-link dropdown-toggle" role="menuitem" tabindex="0">
+                        More
+                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#education" class="nav-link">Education</a></li>
+                        <li><a href="#testimonials" class="nav-link">Google Reviews</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+                    <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                    <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" role="main">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero section" id="hero" aria-labelledby="hero-title">
+            <div class="hero-bg">
+                <div class="hero-gradient"></div>
+                <div class="hero-grid"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge animate-fade-up">
+                        <span class="badge-dot"></span>
+                        <span>Open to opportunities</span>
+                    </div>
+
+                    <h1 class="hero-title animate-fade-up" id="hero-title">
+                        <span class="hero-greeting">Hello, I'm</span>
+                        <span class="hero-name">Shahid Gul</span>
+                        <span class="hero-role">
+                            <span class="role-static"></span>
+                            <span class="role-dynamic" id="typed-text"></span>
+                            <span class="typing-cursor">|</span>
+                        </span>
+                    </h1>
+
+                    <p class="hero-description animate-fade-up">
+                        Frontend Developer with hands-on experience building scalable,
+                        production-ready web applications
+                        using <strong>React</strong>, <strong>JavaScript (ES6+)</strong>, and modern web technologies.
+                        Passionate about creating efficient, user-centric, and high-performance frontend systems with
+                        clean, maintainable architecture.
+                    </p>
+
+                    <div class="hero-cta animate-fade-up">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats animate-fade-up">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual animate-fade-left">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="traffic-lights">
+                                <span class="traffic-light red"></span>
+                                <span class="traffic-light yellow"></span>
+                                <span class="traffic-light green"></span>
+                            </div>
+                            <div class="window-title">developer.js</div>
+                        </div>
+                        <div class="window-body">
+                            <div class="line-numbers">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                            </div>
+                            <div class="code-content">
+                                <pre class="code-block"><code class="language-javascript"><span class="token keyword">const</span> <span class="token variable">developer</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token property">name</span><span class="token punctuation">:</span> <span class="token string">"Shahid Gul"</span><span class="token punctuation">,</span>
+  <span class="token property">role</span><span class="token punctuation">:</span> <span class="token string">"Frontend Engineer"</span><span class="token punctuation">,</span>
+  <span class="token property">location</span><span class="token punctuation">:</span> <span class="token string">"Srinagar, India"</span><span class="token punctuation">,</span>
+
+  <span class="token property">skills</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"React"</span><span class="token punctuation">,</span> <span class="token string">"JavaScript"</span><span class="token punctuation">,</span>
+    <span class="token string">"HTML/CSS"</span><span class="token punctuation">,</span> <span class="token string">"GSAP"</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token function">createMagic</span><span class="token punctuation">:</span> <span class="token punctuation">()</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"Beautiful Interfaces ✨"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">};</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badges -->
+                    <div class="floating-badge badge-react">
+                        <svg viewBox="-10.5 -9.45 21 18.9" fill="none" class="badge-icon">
+                            <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
+                            <g stroke="currentColor" stroke-width="1" fill="none">
+                                <ellipse rx="10" ry="4.5"></ellipse>
+                                <ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
+                                <ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
+                            </g>
+                        </svg>
+                        <span>React</span>
+                    </div>
+
+                    <div class="floating-badge badge-responsive">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="badge-icon">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                        <span>Responsive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <a href="#about" class="scroll-link" aria-label="Scroll to about section">
+                    <span class="scroll-text">Scroll</span>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="about section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">Get To Know Me</span>
+                    <h2 class="section-title animate-fade-up" id="about-title">About Me</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image animate-fade-right">
+                        <div class="about-image-wrapper">
+                            <div class="about-image-main">
+                                <img src="images/profile.png" alt="Shahid Gul" class="about-profile-img">
+                            </div>
+                            <div class="about-image-accent"></div>
+                            <div class="about-experience-badge">
+                                <span class="experience-number">2+</span>
+                                <span class="experience-text">Years of<br>Experience</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-text animate-fade-left">
+                        <h3 class="about-headline">
+                            Crafting Digital Excellence Through Code & Design
+                        </h3>
+
+                        <div class="about-description">
+                            <p>
+                                I'm a <strong>Senior Frontend Developer</strong> and <strong>UI/UX Designer</strong>
+                                with over 2+ years of experience building exceptional digital products for
+                                startups and Fortune 10 companies alike.
+                            </p>
+                            <p>
+                                My journey began in the early days of web development, and I've evolved alongside
+                                the industry—from table-based layouts to modern component architectures. This deep
+                                understanding of web fundamentals, combined with cutting-edge expertise, allows me
+                                to architect solutions that are both innovative and rock-solid.
+                            </p>
+                            <p>
+                                I believe that great software is built at the intersection of <strong>technical
+                                    excellence</strong>, <strong>thoughtful design</strong>, and <strong>user
+                                    empathy</strong>.
+                                Every line of code I write serves a purpose, and every pixel I place tells a story.
+                            </p>
+                        </div>
+
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Name</span>
+                                <span class="detail-value">Shahid Gul</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Srinagar, JK, India</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Email</span>
+                                <span class="detail-value">meshahid36@gmail.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Phone</span>
+                                <span class="detail-value">+91 7006811096</span>
+                            </div>
+                        </div>
+
+                        <div class="about-cta">
+                            <a href="#contact" class="btn btn-primary">
+                                <span>Let's Work Together</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#" class="btn btn-outline" download>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                                </svg>
+                                <span>Download CV</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section class="skills section section-alt" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">What I Do Best</span>
+                    <h2 class="section-title animate-fade-up" id="skills-title">Skills & Expertise</h2>
+                    <p class="section-description animate-fade-up">
+                        A comprehensive toolkit refined over 2+ years of building exceptional digital experiences.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Frontend Development -->
+                    <div class="skill-category animate-fade-up">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Frontend Development</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 / CSS3</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Material UI / Tailwind CSS</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TanStack Query</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="82"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Database -->
+                    <div class="skill-category animate-fade-up" style="--delay: 0.1s">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Backend & Database</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">REST APIs</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB (Basic)</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Version Control & Development Tools -->
+                    <div class="skill-category animate-fade-up" style="--delay: 0.2s">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Version Control & Tools</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git / GitHub</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">VS Code</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Chrome DevTools</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & DevOps -->
+                    <div class="skill-category animate-fade-up" style="--delay: 0.3s">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Tools & DevOps</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git / GitHub</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker / Kubernetes</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="78"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS / Vercel / Netlify</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CI/CD Pipelines</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="82"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Testing (Jest, Cypress)</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Skills Tags -->
+                <div class="skills-additional animate-fade-up">
+                    <h4 class="skills-additional-title">Also experienced with</h4>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Zustand</span>
+                        <span class="skill-tag">TailwindCSS</span>
+                        <span class="skill-tag">Styled Components</span>
+                        <span class="skill-tag">Framer Motion</span>
+                        <span class="skill-tag">Three.js</span>
+                        <span class="skill-tag">WebGL</span>
+                        <span class="skill-tag">PWA</span>
+                        <span class="skill-tag">Web Accessibility</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                        <span class="skill-tag">SEO</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Technical Writing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section class="projects section" id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">My Recent Work</span>
+                    <h2 class="section-title animate-fade-up" id="projects-title">Featured Projects</h2>
+                    <p class="section-description animate-fade-up">
+                        A selection of projects that showcase my expertise in building modern, scalable applications.
+                    </p>
+                </div>
+
+                <div class="projects-filter animate-fade-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">UI/UX</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card animate-fade-up" data-category="web">
+                        <div class="project-image">
+                            <img src="images/Hydrowarm.PNG" alt="Hydrowarm CRM System" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View live project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="project-link" aria-label="View source code">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">CRM System</span>
+                            <h3 class="project-title">Hydrowarm CRM System</h3>
+                            <p class="project-description">
+                                Production-ready CRM system with role-based dashboards, permission-based UI rendering,
+                                and lead management workflows. Built with reusable components and optimized server-state
+                                handling.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">TanStack Query</span>
+                                <span class="tech-tag">Material UI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card animate-fade-up" data-category="web" style="--delay: 0.1s">
+                        <div class="project-image">
+                            <img src="images/lead_managment.PNG" alt="Lead Management System" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View live project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="project-link" aria-label="View source code">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Lead Management</span>
+                            <h3 class="project-title">CRM / Lead Management System</h3>
+                            <p class="project-description">
+                                Dynamic CRM frontend with dashboards, forms, filters, and lead tracking modules.
+                                Efficient API data management and role-based UI components with focus on usability.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">REST APIs</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card animate-fade-up" data-category="mobile" style="--delay: 0.2s">
+                        <div class="project-image">
+                            <img src="images/quiz.png" alt="Online Quiz System" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View live project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="project-link" aria-label="View source code">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Quiz System</span>
+                            <h3 class="project-title">Online Quiz System</h3>
+                            <p class="project-description">
+                                Built an online quiz system using PHP and MySQL featuring multiple-choice questions,
+                                automated score calculation, and result display. Designed database schema and
+                                implemented
+                                backend logic.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Shopistan -->
+                    <article class="project-card animate-fade-up" data-category="web" style="--delay: 0.3s">
+                        <div class="project-image">
+                            <img src="images/shpistan.png" alt="Shopistan E-Commerce" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View live project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">E-Commerce</span>
+                            <h3 class="project-title">Shopistan</h3>
+                            <p class="project-description">
+                                A full-stack MERN e-commerce platform where I focused on frontend development. 
+                                Features include product filtering, cart management, and secure checkout flows.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Tailwind</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projects-cta animate-fade-up">
+                    <a href="#" class="btn btn-outline">
+                        <span>View All Projects</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE SECTION ===== -->
+        <section class="experience section section-alt" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">My Journey</span>
+                    <h2 class="section-title animate-fade-up" id="experience-title">Work Experience</h2>
+                    <p class="section-description animate-fade-up">
+                        A timeline of my professional journey and the companies I've had the privilege to work with.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item animate-fade-up">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-company">
+                                    <div class="company-logo">
+                                        <svg viewBox="0 0 40 40" fill="none">
+                                            <rect width="40" height="40" rx="8" fill="currentColor" opacity="0.1" />
+                                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                                                fill="currentColor" font-size="16" font-weight="600">K</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="company-name">KGI - Kashmir Glass Industries</h3>
+                                        <span class="company-location">Srinagar, JK</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="date-badge">Dec 2024 - Present</span>
+                                </div>
+                            </div>
+                            <h4 class="timeline-role">Frontend Developer</h4>
+                            <p class="timeline-description">
+                                Developing and maintaining responsive web applications using React, HTML, CSS, and
+                                JavaScript.
+                                Building scalable and reusable UI components with Material UI and Tailwind CSS.
+                                Integrating REST APIs
+                                and managing server state using TanStack Query while following clean architecture
+                                practices.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">TanStack Query</span>
+                                <span class="skill-tag">Material UI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item animate-fade-up" style="--delay: 0.1s">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-company">
+                                    <div class="company-logo">
+                                        <svg viewBox="0 0 40 40" fill="none">
+                                            <rect width="40" height="40" rx="8" fill="currentColor" opacity="0.1" />
+                                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                                                fill="currentColor" font-size="16" font-weight="600">T</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="company-name">The Digital London - AIIoTS Geek World</h3>
+                                        <span class="company-location">Hybrid</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="date-badge">Apr 2024 - Jul 2024</span>
+                                </div>
+                            </div>
+                            <h4 class="timeline-role">Frontend Developer Intern</h4>
+                            <p class="timeline-description">
+                                Developed responsive UI components using HTML, CSS, and JavaScript. Worked on frontend
+                                bug fixing,
+                                UI improvements, and assisted in API integration. Followed clean coding standards and
+                                participated
+                                in code reviews to improve UI performance.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">UI Development</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION SECTION ===== -->
+        <section class="education section" id="education" aria-labelledby="education-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">My Background</span>
+                    <h2 class="section-title animate-fade-up" id="education-title">Education</h2>
+                    <p class="section-description animate-fade-up">
+                        My academic journey and qualifications that shaped my technical foundation.
+                    </p>
+                </div>
+
+                <div class="timeline timeline-reverse">
+                    <!-- Education Item 1 -->
+                    <div class="timeline-item animate-fade-up">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-company">
+                                    <div class="company-logo">
+                                        <svg viewBox="0 0 40 40" fill="none">
+                                            <rect width="40" height="40" rx="8" fill="currentColor" opacity="0.1" />
+                                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                                                fill="currentColor" font-size="16" font-weight="600">🎓</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="company-name">Master of Computer Applications (MCA)</h3>
+                                        <span class="company-location">University of Kashmir</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="date-badge">2022 - 2024</span>
+                                </div>
+                            </div>
+                            <h4 class="timeline-role">Computer Science & Applications · CGPA: 6.9</h4>
+                            <p class="timeline-description">
+                                Advanced coursework in software engineering, advanced algorithms, cloud computing,
+                                machine learning, and enterprise application development. Gained expertise in system
+                                design, advanced programming paradigms, and research methodologies.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Software Engineering</span>
+                                <span class="skill-tag">Advanced Algorithms</span>
+                                <span class="skill-tag">Cloud Computing</span>
+                                <span class="skill-tag">System Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="timeline-item animate-fade-up" style="--delay: 0.1s">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-company">
+                                    <div class="company-logo">
+                                        <svg viewBox="0 0 40 40" fill="none">
+                                            <rect width="40" height="40" rx="8" fill="currentColor" opacity="0.1" />
+                                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                                                fill="currentColor" font-size="16" font-weight="600">📚</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="company-name">Bachelor of Computer Applications (BCA)</h3>
+                                        <span class="company-location">Ganderbal Degree College, Kashmir
+                                            University</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="date-badge">2017 - 2021</span>
+                                </div>
+                            </div>
+                            <h4 class="timeline-role">Computer Applications</h4>
+                            <p class="timeline-description">
+                                Comprehensive study of core computer science subjects including programming
+                                fundamentals,
+                                data structures, algorithms, database management systems, and web technologies. Built
+                                strong
+                                foundation in software development and analytical problem-solving.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GOOGLE REVIEWS SECTION ===== -->
+        <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">What People Say</span>
+                    <h2 class="section-title animate-fade-up" id="testimonials-title">Google Reviews</h2>
+                    <p class="section-description animate-fade-up">
+                        Kind words from colleagues and clients I've had the pleasure to work with.
+                    </p>
+                </div>
+
+                <div class="testimonials-slider" id="testimonials-slider">
+                    <div class="testimonials-track" id="testimonials-track">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card animate-fade-up">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                    </svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    Shahid is one of the most talented engineers I've ever worked with. His ability to
+                                    translate complex requirements into elegant, performant solutions is remarkable.
+                                    Beyond technical skills, he's an exceptional collaborator who elevates everyone
+                                    around him.
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <div class="avatar-placeholder-small">
+                                        <span>AK</span>
+                                    </div>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Arif Khan</h4>
+                                    <span class="author-role">Senior Developer, KGI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card animate-fade-up" style="--delay: 0.1s">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                    </svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    Working with Shahid transformed our product. He didn't just build what we asked
+                                    for—he
+                                    helped us understand what we truly needed. The design system he created has become
+                                    the
+                                    foundation of our entire product ecosystem.
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <div class="avatar-placeholder-small">
+                                        <span>FA</span>
+                                    </div>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Farhan Ahmed</h4>
+                                    <span class="author-role">Tech Lead, AIIoTS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card animate-fade-up" style="--delay: 0.2s">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                    </svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    Shahid brings a rare combination of technical excellence and design sensibility. His
+                                    attention to detail is unmatched, and he has an incredible ability to mentor junior
+                                    developers. Any team would be lucky to have him.
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <div class="avatar-placeholder-small">
+                                        <span>ZM</span>
+                                    </div>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Zainab Malik</h4>
+                                    <span class="author-role">Product Manager, Tech Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card animate-fade-up" style="--delay: 0.3s">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                    </svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    I've hired Shahid for multiple projects, and each time he's exceeded expectations.
+                                    His code is clean, well-documented, and maintainable. He communicates proactively
+                                    and
+                                    always delivers on time. Simply the best.
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <div class="avatar-placeholder-small">
+                                        <span>IH</span>
+                                    </div>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Imran Hussain</h4>
+                                    <span class="author-role">Engineering Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonials-navigation">
+                        <button class="testimonial-nav-btn prev" id="testimonial-prev"
+                            aria-label="Previous testimonial">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <div class="testimonials-dots" id="testimonials-dots"></div>
+                        <button class="testimonial-nav-btn next" id="testimonial-next" aria-label="Next testimonial">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact section section-alt" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">Get In Touch</span>
+                    <h2 class="section-title animate-fade-up" id="contact-title">Let's Work Together</h2>
+                    <p class="section-description animate-fade-up">
+                        Have a project in mind? I'd love to hear about it. Let's discuss how we can create something
+                        amazing together.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info animate-fade-right">
+                        <h3 class="contact-info-title">Contact Information</h3>
+                        <p class="contact-info-description">
+                            Feel free to reach out through any of these channels. I typically respond within 24 hours.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:meshahid36@gmail.com" class="contact-value">meshahid36@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Phone</span>
+                                    <a href="tel:+917006811096" class="contact-value">+91 7006811096</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Srinagar, Jammu & Kashmir, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <h4 class="social-title">Follow Me</h4>
+                            <div class="social-links">
+                                <a href="https://github.com/Shahidgul19" class="social-link"
+                                    aria-label="GitHub Profile" title="GitHub" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com/in/shahid-gul-42a1691aa" class="social-link"
+                                    aria-label="LinkedIn Profile" title="LinkedIn" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                    </svg>
+                                </a>
+                                <a href="https://facebook.com/ishahid.1998" class="social-link"
+                                    aria-label="Facebook Profile" title="Facebook" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </a>
+                                <a href="https://instagram.com/i.mshahid___sid" class="social-link"
+                                    aria-label="Instagram Profile" title="Instagram" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                                    </svg>
+                                </a>
+                                <a href="https://stackoverflow.com/users/14758146" class="social-link"
+                                    aria-label="Stack Overflow Profile" title="Stack Overflow" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.093-10.473-2.201zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154Z" />
+                                    </svg>
+                                </a>
+                                <a href="https://x.com/Imshahidsid" class="social-link"
+                                    aria-label="X (Twitter) Profile" title="X (Twitter)" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper animate-fade-left">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Shahid Gul"
+                                        required autocomplete="name">
+                                    <span class="form-error" id="name-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="shahidgul@gmai.com" required autocomplete="email">
+                                    <span class="form-error" id="email-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input"
+                                    placeholder="Project Inquiry" required>
+                                <span class="form-error" id="subject-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-input form-textarea"
+                                    placeholder="Tell me about your project..." rows="5" required></textarea>
+                                <span class="form-error" id="message-error"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">
+                                    <svg class="spinner" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"
+                                            opacity="0.25" />
+                                        <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    Sending...
+                                </span>
+                                <span class="btn-success">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Sent!
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== FAQ SECTION (AEO Optimization) ===== -->
+        <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle animate-fade-up">Have Questions?</span>
+                    <h2 class="section-title animate-fade-up" id="faq-title">Common Questions</h2>
+                </div>
+
+                <div class="skills-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; gap: 1.5rem;">
+                    <div class="skill-category animate-fade-up" style="padding: 1.5rem;">
+                        <h3 class="skill-category-title" style="margin-bottom: 0.5rem;">What services do you offer?</h3>
+                        <p class="project-description">I specialize in high-performance web development using React, custom UI/UX design, and SEO optimization. I build everything from landing pages to complex SaaS applications.</p>
+                    </div>
+                    <div class="skill-category animate-fade-up" style="padding: 1.5rem; --delay: 0.1s">
+                        <h3 class="skill-category-title" style="margin-bottom: 0.5rem;">Where are you located?</h3>
+                        <p class="project-description">I am based in Srinagar, Jammu & Kashmir, India, but I work with clients and teams globally through remote collaboration tools.</p>
+                    </div>
+                    <div class="skill-category animate-fade-up" style="padding: 1.5rem; --delay: 0.2s">
+                        <h3 class="skill-category-title" style="margin-bottom: 0.5rem;">What technologies do you use?</h3>
+                        <p class="project-description">My core stack includes React, TypeScript, Next.js, and Node.js. I also have expertise in styling with Material UI, Tailwind CSS, and Framer Motion for animations.</p>
+                    </div>
+                </div>
+
+                <!-- Structured Data for FAQ -->
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [{
+                    "@type": "Question",
+                    "name": "What services do you offer?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "I specialize in high-performance web development using React, custom UI/UX design, and SEO optimization. I build everything from landing pages to complex SaaS applications."
+                    }
+                  }, {
+                    "@type": "Question",
+                    "name": "Where are you located?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "I am based in Srinagar, Jammu & Kashmir, India, but I work with clients and teams globally through remote collaboration tools."
+                    }
+                  }, {
+                    "@type": "Question",
+                    "name": "What technologies do you use?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "My core stack includes React, TypeScript, Next.js, and Node.js. I also have expertise in styling with Material UI, Tailwind CSS, and Framer Motion for animations."
+                    }
+                  }]
+                }
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo" id="footer">
+        <div class="container">
+            <!-- Google Maps Section at Top -->
+            <div class="footer-map" style="margin-bottom: 3rem;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13223.224200673743!2d74.79123115539554!3d34.04884591581292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f920aedbe2b%3A0x14e9064659901cbe!2sShahid%20Gul!5e0!3m2!1sen!2sin!4v1771234480325!5m2!1sen!2sin"
+                    width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-text">SG</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-tagline">
+                        Crafting exceptional digital experiences with code and creativity.
+                    </p>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-nav-group">
+                        <h4 class="footer-nav-title">Navigation</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-group">
+                        <h4 class="footer-nav-title">Connect</h4>
+                        <ul class="footer-nav-list" style="flex-direction: row; gap: 1rem; flex-wrap: wrap;">
+                            <li>
+                                <a href="https://github.com/Shahidgul19" target="_blank" rel="noopener noreferrer" title="GitHub" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/in/shahid-gul-42a1691aa" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/Imshahidsid" target="_blank" rel="noopener noreferrer" title="X (Twitter)" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://facebook.com/ishahid.1998" target="_blank" rel="noopener noreferrer" title="Facebook" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-group">
+                        <h4 class="footer-nav-title">Contact</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="mailto:meshahid36@gmail.com">Email Me</a></li>
+                            <li><a href="#education">Education</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © <span id="current-year">2024</span> Shahid Gul. All rights reserved.
+                </p>
+                <p class="footer-credit">
+                    Designed & Built with <span class="heart">❤</span> in Srinagar, JK
+                </p>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 15l-6-6-6 6" />
+            </svg>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
