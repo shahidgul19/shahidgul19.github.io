@@ -852,25 +852,3 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ============================================
-// ERROR HANDLING
-// ============================================
-window.addEventListener('error', (e) => {
-    console.error('An error occurred:', e.message);
-});
-
-// ============================================
-// CONSOLE EASTER EGG
-// ============================================
-console.log(
-    '%c👋 Hello, curious developer!',
-    'font-size: 24px; font-weight: bold; color: #3b82f6;'
-);
-console.log(
-    '%cInterested in working together? Let\'s connect!',
-    'font-size: 14px; color: #64748b;'
-);
-console.log(
-    '%c📧 alex@alexmorgan.dev',
-    'font-size: 14px; color: #10b981;'
-);
