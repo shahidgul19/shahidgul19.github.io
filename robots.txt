@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://shahidgul.dev/sitemap.xml
+Sitemap: https://shahidgul19.github.io/sitemap.xml
